@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<script type="text/javascript">
+		// function is_weixn(){
+		// 	var ua = navigator.userAgent.toLowerCase();
+		// 	if(ua.match(/MicroMessenger/i)=='micromessenger') {
+		// 	  console.log('是微信环境');
+		// 	} else {
+		// 	  window.location.href = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx2d47cd8ea102b435&redirect_uri=https%3a%2f%2fwww.jiandoukeji.com%2fh5%2f2018%2fala%2faudi%2fvorsprung%2findex.html&response_type=code&scope=SCOPE&state=STATE#wechat_redirect';
+		// 	}
+		// }
+		// is_weixn();
+	</script>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+	<meta name="format-detection" content="telephone=no">
+	<title>北区图书馆</title>
+	<link rel="stylesheet" type="text/css" href="stylesheets/animate.css">
+	<link rel="stylesheet" type="text/css" href="stylesheets/main.css">
+	<link rel="stylesheet" href="stylesheets/master.css">
+
+	<!-- <script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script> -->
+
+
+</head>
+
+<body>
+
+	<!-- loading BEGIN-->
+	<!--
+    	loading页 loading中的图片
+    	尽量使用<img />标签插入
+    	或直接写在元素的style里面
+    	或写在head标签中的style样式里
+    -->
+	<div class="loadPage" style="width: 100%; height: 100%;">
+	</div>
+	<!-- loading END -->
+
+	<!-- global start -->
+
+	<div class="container">
+		<!-- <div class="console"></div> -->
+
+		<div class="last"></div>
+		<div class="shareBtn"></div>
+		<div class="replayBtn"></div>
+
+		<div id="wrapper">
+			<div id="scroller"></div>
+			<div class="slideTip">
+				<p>缓缓向左 滑动屏幕</p>
+			</div>
+		</div>
+		<!-- 这是demo用的类名和id  后续要改 -->
+		<div class="gesture">
+			<div class="starBtn pulse animated infinite"></div>
+		</div>
+
+		<div class="starfield" id="starfield1">
+			<div id="stars1">
+				<!-- summer -->
+				<div class="summerTree T1 fs"></div>
+				<div class="sun roate fs"></div>
+				<div class="summerCloud fs"></div>
+				<div class="summerCloud2 fs"></div>
+				<div class="grass1 fs"></div>
+				<div class="grass2 fs"></div>
+				<!-- 31 dong -->
+				<div class="teachBuild"></div>
+				<div class="summerGrass"></div>
+				<div class="summerTree"></div>
+				<div class="tree2"></div>
+				<!-- summer over -->
+				<!-- autumn -->
+				<div class="autumnGrass G2"></div>
+				<div class="autumnTree"></div>
+				<div class="fails"></div>
+				<!-- train coffee -->
+				<div class="train"></div>
+				<!-- winter -->
+				<!-- spring -->
+				<div class="bigGrass"></div>
+				<div class="zhang"></div>
+				<div class="springPink"></div>
+				<div class="springWhilte"></div>
+				<!-- winter -->
+				<div class="winterTree"></div>
+				<div class="winterSport"></div>
+				<div class="winterSnow"></div>
+				<!-- library -->
+				<div class="library"></div>
+				<div class="springLibGrass"></div>
+				<div class="springFler"></div>
+				<!-- 带孙女玩 -->
+				<!-- 变老逝去 -->
+				<!-- <div class="night2"></div> -->
+
+				<div class="text text1">
+					<p>在这个一片蝉鸣的季节</p>
+					<p>我来到了这所学校</p>
+				</div>
+				<div class="text text2">
+					<p>
+						<p>炎热的夏伴随这教学楼勤勉的求学身影</p>
+						<p>我度过了在这里的第一个季节</p>
+				</div>
+				<div class="text text3">
+					<p>落叶的季节里</p>
+					<p>这里有香浓的咖啡味</p>
+					<p>还有舒适的音乐</p>
+				</div>
+				<div class="text text6">
+					<p>寒冷的冬</p>
+					<p>有纷扬的雪花</p>
+				</div>
+				<div class="text text8">
+					<p>曼妙的春天</p>
+					<p>我也依旧这样走过</p>
+				</div>
+				<div class="text text10">
+					<p>却闻见了比花香更吸引我的味道</p>
+					<p>那是如醇酒般的思想与书写碰撞的香气</p>
+				</div>
+			</div>
+		</div>
+		<div class="starfield" id="starfield2">
+			<div id="stars2"></div>
+		</div>
+		<div class="shareDiv"></div>
+		<div class="clock">
+			<img src="images/clock.png" alt="">
+			<div class="clast"></div>
+		</div>
+		<div class="role role1"></div>
+
+		<div class="ostars">
+			<div class="ostar"></div>
+			<div class="ostar pink"></div>
+			<div class="ostar blue"></div>
+			<div class="ostar yellow"></div>
+			<div class="endPage"></div>
+		</div>
+		<div class="text text13">
+			<p>游荡在交大的一年</p>
+			<p>美丽的风景走过</p>
+			<p>唯有在此我停下脚步</p>
+		</div>
+		<div class="text text14 fadeInUp animated3"></div>
+		<div class="text text0">
+			<p class="fadeInUp animated2">交大的四季总是那么醉人</p>
+		</div>
+		<div class="ewm  fadeInUp animated3">
+			<div class="ewmtip">
+				<img src="images/ewm.png" alt="">
+				<p>华东交通大学</p>
+				<p> 日新网 </p>
+			</div>
+			<div class="cych"><a href="http://ecjtu.net/"><span>日新网</span></a></div>
+		</div>
+
+	</div>
+
+	<!-- global end -->
+
+	<!--旋屏提示-->
+	<div id="orientLayer" class="mod-orient-layer">
+		<div class="mod-orient-layer__content">
+			<i class="icon mod-orient-layer__icon-orient"></i>
+			<div class="mod-orient-layer__desc">为了更好的体验，请先锁屏再横屏浏览</div>
+		</div>
+	</div>
+	<!-- 音乐 BEGIN-->
+	<div class="musicinfo" id="musicinfo">
+		<audio id="musicid" src="music/bg.mp3" preload="preload" loop="loop">您的浏览器不支持 audio标签。</audio>
+		<!-- <audio id="firework" src="music/firework2.mp3" preload="preload" loop="loop">您的浏览器不支持 audio标签。</audio> -->
+		<img class="music on roate" src="images/musicon.png">
+	</div>
+
+	<!-- 音乐 END-->
+
+
+	<script src="javascripts/libs/jquery-3.2.1.min.js"></script>
+	<script src="javascripts/libs/imagesLoader.min.js"></script>
+	<script src="javascripts/libs/iscroll-probe.js"></script>
+
+	<script src="javascripts/libs/howler.min.js"></script>
+
+	<script type="text/javascript">
+		//获取url参数
+		function getQueryString(name) {
+			var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
+			var r = window.location.search.substr(1).match(reg);
+			if (r != null) {
+				return unescape(r[2]);
+			}
+			return null;
+		}
+	</script>
+
+	<script type="text/javascript">
+		var _w = $(window).width();
+		var _h = $(window).height();
+		$('.loadPage').css({
+			'width': _w + 'px',
+			'height': _h + 'px'
+		});
+
+		var u = navigator.userAgent;
+		var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+		var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+
+		var videoFlag = 1;
+		var Video = document.getElementById("VIDEO");
+
+		function audioAutoPlay(id) {
+			var audio = document.getElementById(id);
+			audio.play();
+			document.addEventListener("WeixinJSBridgeReady", function() {
+				audio.play();
+			}, false);
+		}
+		audioAutoPlay('musicid');
+
+		document.addEventListener('touchmove', function(e) {
+			e.preventDefault();
+		}, false);
+
+		var pros = 0;
+		var i = 0;
+		/*图片预加载*/
+		var loader = new ImagesLoader();
+		loader.loadImages([
+			'autumn.png',
+			'clock.png',
+			'clock12.png',
+			'musicoff.png',
+			'musicon.png',
+			'grass1.png',
+			'grass2.png'
+		], 'images/');
+		loader.complete(function() {
+			setTimeout(function() {
+				startAct();
+			}, 500);
+
+			loader.loadImages([
+				'spring/springPink.png',
+				'spring/springWhilte.png',
+				'spring/springLibGrass.png',
+				'spring/springRole1.png',
+				'spring/springRole2.png',
+				'spring/springRole3.png',
+				'spring/springZhang.png',
+				'spring/roleBack.png',
+				'spring/bigGrass.png',
+				'summer/summerTree.png',
+				'summer/summerGrass.png',
+				'summer/summerCloud.png',
+				'summer/summerRole1.png',
+				'summer/summerRole2.png',
+				'summer/summerRole3.png',
+				'summer/summerRole4.png',
+				'summer/summerRole5.png',
+				'autumn/autumnGrass.png',
+				'autumn/autumnRole1.png',
+				'autumn/autumnRole2.png',
+				'autumn/autumnRole3.png',
+				'autumn/autumnRole4.png',
+				'autumn/autumnRole5.png',
+				'autumn/fails.png',
+				'autumn/Train.png',
+				'winter/bg.jpg',
+				'winter/winterSnow.png',
+				'winter/winterTree.png',
+				'winter/winterSport.png',
+				'winter/winterRole1.png',
+				'winter/winterRole2.png',
+				'winter/winterRole3.png'
+			], 'hf/')
+			// 启动首屏动画
+		});
+		var lddeg = 0;
+		loader.process(function() {
+			// console.log(this.processNum);
+			pros = this.processNum;
+			lddeg = (pros / 100) * 360;
+			$('.ldbg img').css({
+				'transform': 'rotate(' + lddeg + 'deg)'
+			});
+			$('.ldbg p').html(pros + "%");
+			$(".text0").show();
+		});
+		loader.start();
+
+
+		// 去掉alert的默认显示域名
+		window.alert = function(name) {
+			var iframe = document.createElement("IFRAME");
+			iframe.style.display = "none";
+			iframe.setAttribute("src", 'data:text/plain,');
+			document.documentElement.appendChild(iframe);
+			window.frames[0].window.alert(name);
+			iframe.parentNode.removeChild(iframe);
+		}
+
+
+		/************************* 微信分享功能 ********************************/
+		// var sharethis = function() {
+		// 	// var server = 'https://www.jiandoukeji.com/codes/jiandou/game.php/Home/Share/JDOU_shareWx/';
+		// 	// var server = 'https://www.h5-share.com/h5share.php/Home/Share/JDOU_shareWx_niu/';
+		// 	// var server = 'https://www.h5-share.com/h5share.php/Home/Shareworld/JDOU_shareWx_niu/';
+		//
+		// 	var currenturl = window.location.href;
+		// 	var postData = {
+		// 		url: currenturl
+		// 	}
+		// 	$.ajax({
+		// 		type: "POST",
+		// 		url: server,
+		// 		data: postData,
+		// 		async: true,
+		// 		dataType: "json",
+		// 		success: function(result) {
+		// 			//分享功能
+		// 			wx.config({
+		// 				debug: false,
+		// 				appId: result.appId,
+		// 				timestamp: result.timestamp,
+		// 				nonceStr: result.nonceStr,
+		// 				signature: result.signature,
+		// 				jsApiList: [
+		// 					'checkJsApi',
+		// 					'onMenuShareTimeline',
+		// 					'onMenuShareAppMessage',
+		// 					'onMenuShareQQ',
+		// 					'onMenuShareWeibo'
+		// 				]
+		// 			});
+		// 			wechatReady();
+		// 		},
+		// 		error: function() {
+		// 			//window.alert("系统错误，请稍后再试");
+		// 		}
+		// 	});
+		//
+		// }
+		//
+		// var shareTitle = '北区图书馆';
+		// var imgUrl = 'https://www.jiandoukeji.com/h5/2018/ala/project/jiandou/life/images/thumb.png';
+		// var shareDesc = '在这个一片蝉鸣的季节，我来到了这这所学校...';
+		// var shareUrl = 'https://www.jiandoukeji.com/h5/2018/ala/project/jiandou/life/index.html';
+		//
+		// function wechatReady() {
+		// 	wx.ready(function() {
+		//
+		// 		var appMessageShareData = {
+		// 			title: shareTitle,
+		// 			desc: shareDesc,
+		// 			link: shareUrl,
+		// 			imgUrl: imgUrl
+		// 		};
+		// 		wx.onMenuShareAppMessage(appMessageShareData);
+		// 		wx.onMenuShareTimeline(appMessageShareData);
+		// 		wx.onMenuShareQQ(appMessageShareData);
+		// 		wx.onMenuShareWeibo(appMessageShareData);
+		// 	})
+		// 	wx.error(function(res) {
+		// 		// alert(res.errMsg);
+		// 	});
+		// }
+		//
+		// sharethis();
+	</script>
+
+	<script type="text/javascript" src="javascripts/js.js?v=1.3"></script>
+
+	<!--腾讯大数据统计代码 BEGIN-->
+	<script>
+		var _mtac = {};
+		(function() {
+			var mta = document.createElement("script");
+			mta.src = "//pingjs.qq.com/h5/stats.js?v2.0.2";
+			mta.setAttribute("name", "MTAH5");
+			mta.setAttribute("sid", "500602908");
+			var s = document.getElementsByTagName("script")[0];
+			s.parentNode.insertBefore(mta, s);
+		})();
+	</script>
+	<!--腾讯大数据统计代码 END-->
+</body>
+
+</html>

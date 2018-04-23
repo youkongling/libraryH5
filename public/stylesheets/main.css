@@ -1,0 +1,1811 @@
+@charset "UTF-8";
+/**
+ *
+ * @authors Arafat @ http://www.ijiandou.com
+ * @date    2018-03-26 10:00:00
+ * @version 1.0.0
+ */
+
+/*reset css*/
+
+/* Set default font family and font color and background color */
+
+html {
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+  color: #333;
+  background: #4d4f58;
+  padding: 0;
+  margin: 0;
+  color: #f18b26;
+  transform-origin: top left;
+  font-weight: 150;
+}
+
+/***** body *****/
+
+body {
+  font-size: 100%;
+  background: #4d4f58;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/*****Remove default margin and padding*****/
+
+body, dl, h1, h2, h3, h4, h5, h6, form, p {
+  margin: 0;
+}
+
+input, button, textarea, td, th {
+  padding: 0;
+}
+
+menu, ul, ol {
+  margin: 0;
+  padding: 0;
+}
+
+/***** Remove default vertical scrollbar in IE 8/9/10/11 and resize button*****/
+
+textarea {
+  resize: none;
+  overflow: auto;
+}
+
+/***** Improve link behaviour*****/
+
+a {
+  text-decoration: none;
+  background-color: transparent;
+}
+
+a:active, a:hover {
+  outline: 0;
+}
+
+/***** Prevent `sub` and `sup` affecting `line-height` in all browsers. *****/
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/***** fix border problem *****/
+
+iframe, img {
+  border: 0;
+}
+
+/***** remove list style of ul and ol*****/
+
+ul, ol {
+  list-style: none;
+}
+
+/***** input and button *****/
+
+button {
+  overflow: visible;
+}
+
+button, select {
+  text-transform: none;
+}
+
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+button[disabled], html input[disabled] {
+  cursor: default;
+}
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+button:-moz-focusring, input:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+input {
+  line-height: normal;
+}
+
+input[type="checkbox"], input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+}
+
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-input-placeholder {
+  color: #777;
+}
+
+/***** table *****/
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*****display behaviour *****/
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+audio, canvas, progress, video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+[hidden], template {
+  display: none;
+}
+
+/*****common classes *****/
+
+.clear {
+  clear: both;
+}
+
+div, a, button, input, textarea, img {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+
+/*--公共样式BEGIN--*/
+
+.container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: url(../hf/winter/bg.jpg);
+  transform-origin: left top;
+}
+
+.page {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+div {
+  background-size: 100% auto;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/*--公共样式END--*/
+
+/*横屏提示 BEGIN*/
+
+#orientLayer {
+  display: none;
+}
+
+.mod-orient-layer {
+  display: none;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: #333;
+  z-index: 9997;
+}
+
+.mod-orient-layer__content {
+  position: absolute;
+  width: 100%;
+  top: 45%;
+  margin-top: -75px;
+  text-align: center;
+}
+
+.mod-orient-layer__icon-orient {
+  background-image: url(../images/pixels.png);
+  display: inline-block;
+  width: 67px;
+  height: 109px;
+  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -webkit-animation: rotation infinite 1.5s ease-in-out;
+  animation: rotation infinite 1.5s ease-in-out;
+  -webkit-background-size: 67px;
+  background-size: 67px;
+}
+
+.mod-orient-layer__desc {
+  margin-top: 20px;
+  font-size: 15px;
+  color: #ffffff;
+}
+
+@media screen and (min-aspect-ratio: 13/9) {
+  #orientLayer {
+    display: block;
+  }
+}
+
+@-webkit-keyframes rotation {
+  10% {
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+  }
+  50%, 60% {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+  }
+  90% {
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+  }
+}
+
+@keyframes rotation {
+  10% {
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+  }
+  50%, 60% {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+  }
+  90% {
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+  }
+}
+
+/*横屏提示 END*/
+
+/*音乐 BEGIN*/
+
+.musicinfo {
+  width: 36px;
+  height: 36px;
+  position: fixed;
+  top: 3%;
+  right: 4%;
+  z-index: 5;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  z-index: 1000;
+}
+
+.musicinfo img {
+  width: 100%;
+  height: 100%;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+.roate {
+  -webkit-animation: roate 2s linear infinite;
+  animation: roate 2s linear infinite;
+}
+
+@-webkit-keyframes roate {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes roate {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+/*音乐 END*/
+
+/*--Loading BEGIN--*/
+
+.loadPage {
+  position: absolute;
+  background-image: url(../images/bg.jpg);
+  z-index: 99;
+  background-size: 100% 100%;
+  background: -webkit-gradient(linear, left top, right bottom, from(#333333), to(#697077));
+}
+
+.loadtext {
+  position: absolute;
+  width: 100%;
+  height: 30px;
+  bottom: 22%;
+  font-size: 22px;
+  font-family: "Arial";
+  color: #b80c11;
+  text-align: center;
+  letter-spacing: 2px;
+  text-indent: 9px;
+  line-height: 30px;
+}
+
+.loadpic {
+  position: absolute;
+  width: 66%;
+  height: 50%;
+  left: 18%;
+  top: 15%;
+  background-image: url(../images/loadPic11.png);
+  -webkit-animation: loadpic 1s linear infinite;
+}
+
+.progress {
+  position: absolute;
+  width: 76%;
+  height: 2%;
+  left: 12%;
+  bottom: 15%;
+  border: 2px solid #FFF;
+  border-radius: 100px;
+  overflow: hidden;
+}
+
+.progress span {
+  position: absolute;
+  display: inline-block;
+  width: 0%;
+  height: 100%;
+  background: #fff;
+  opacity: 0.5;
+  transition-duration: 0.5s;
+}
+
+.proinner {
+  position: absolute;
+  width: 20%;
+  height: 100%;
+  left: 40%;
+  top: 0;
+}
+
+.proinner img {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition-duration: 2s;
+  transition-timing-function: ease;
+}
+
+/*--Loading END--*/
+
+.gesture {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.role {
+  position: absolute;
+  z-index: 2;
+  width: 133px;
+  height: 255px;
+  left: 38%;
+  /* width: 200px; */
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100% auto;
+  top: 43%;
+  transform: scale(0);
+  transition-duration: 1.5s;
+  opacity: 0;
+}
+
+.role1 {
+  -webkit-animation: role1 1s linear infinite;
+}
+
+.role2 {
+  -webkit-animation: role2 1s linear infinite;
+}
+
+.role3 {
+  -webkit-animation: role3 1s linear infinite;
+}
+
+.role4 {
+  -webkit-animation: role4 1s linear infinite;
+}
+
+.role5 {
+  background-image: url(../hf/spring/roleBack.png);
+}
+
+.stop {
+  animation-play-state: paused;
+  -webkit-animation-play-state: paused;
+}
+
+/*调试专用*/
+
+.console {
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: red;
+  z-index: 99;
+}
+
+.starfield {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.starfield div {
+  position: absolute;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+.starfield div img {
+  position: absolute;
+  height: 100%;
+}
+
+#starfield1 {
+  z-index: 2;
+  width: 9350px;
+}
+
+#stars1 {
+  width: 100%;
+  height: 100%;
+  top: 0%;
+}
+
+#starfield2 {
+  z-index: 1;
+  width: 6000px;
+}
+
+#stars2 {
+  height: 100%;
+  background-image: url(../hf/winter/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 100%;
+}
+
+.text {
+  position: absolute;
+  font-size: 14px;
+  color: #55565b;
+  z-index: 10;
+}
+
+.text p {
+  margin-bottom: 10px;
+}
+
+.text0 {
+  z-index: 99;
+  text-align: center;
+  width: 100%;
+  top: 70%;
+  letter-spacing: 3px;
+  display: none;
+  font-size: 15px;
+}
+
+.text1 {
+  left: 208px;
+  top: 28%;
+  display: none;
+}
+
+.text1 p:nth-child(1) {
+  -webkit-animation-delay: 1s;
+}
+
+.text1 p:nth-child(2) {
+  -webkit-animation-delay: 1.5s;
+}
+
+.text2 {
+  left: 1400px;
+  top: 27%;
+}
+
+.text3 {
+  left: 1835px;
+  top: 8%;
+}
+
+.text4 {
+  left: 2271px;
+  top: 142px;
+  text-align: center;
+}
+
+.text5 {
+  left: 2811px;
+  top: 1%;
+}
+
+.text6 {
+  left: 3350px;
+  top: 390px;
+  color: #ccc;
+}
+
+.text7 {
+  left: 3900px;
+  top: 3%;
+}
+
+.text8 {
+  left: 4400px;
+  top: 200px;
+}
+
+.text9 {
+  left: 4734px;
+  top: 69%;
+}
+
+.text10 {
+  left: 5600px;
+  top: 57%;
+}
+
+.text11 {
+  left: 5800px;
+  top: 412px;
+}
+
+.text12 {
+  left: 6250px;
+  top: 41%;
+}
+
+.text13 {
+  z-index: 99;
+  text-align: center;
+  width: 100%;
+  top: 60%;
+  letter-spacing: 1px;
+  display: none;
+}
+
+.text13 p:nth-child(1) {
+  -webkit-animation-delay: 0.4s;
+}
+
+.text13 p:nth-child(2) {
+  -webkit-animation-delay: 0.8s;
+}
+
+.text13 p:nth-child(3) {
+  -webkit-animation-delay: 1.2s;
+}
+
+.text13 p:nth-child(4) {
+  -webkit-animation-delay: 1.6s;
+}
+
+.text14 {
+  z-index: 99;
+  text-align: center;
+  width: 100%;
+  top: 15%;
+  letter-spacing: 5px;
+  display: none;
+  font-size: 16px;
+}
+
+#wrapper {
+  position: absolute;
+  z-index: 3;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+#scroller {
+  position: absolute;
+  z-index: 3;
+  height: 100%;
+  width: 31020px;
+  overflow: hidden;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-transform: translateZ(0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -webkit-text-size-adjust: none;
+}
+
+#starfield11, #starfield22 {
+  display: none;
+}
+
+/*--出生--*/
+
+.night {
+  width: 680px;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, right bottom, from(#333333), to(#697077));
+  top: 0;
+  left: -50px;
+}
+
+/*--学走路--*/
+
+/*--孩子玩耍--*/
+
+/*--青年--*/
+
+/*--进入职场--*/
+
+/*--结婚--*/
+
+/*--生孩子--*/
+
+.ewm {
+  width: 160px;
+  height: 160px;
+  position: absolute;
+  left: 50%;
+  margin-left: -80px;
+  display: none;
+  z-index: 1000;
+  top: 46%;
+  color: #ccc;
+  text-align: center;
+}
+
+.ewm a {
+  color: #ccc;
+}
+
+.cych {
+  text-decoration: underline;
+}
+
+.ewm img {
+  display: block;
+  width: 100%;
+  margin-bottom: 10%;
+}
+
+.ewmtip {
+  padding-bottom: 35%;
+}
+
+.autumn {
+  background-image: url(../images/autumn.png);
+  width: 1205.5px;
+  height: 580px;
+  top: 0px;
+  z-index: 2;
+  left: 3628px;
+}
+
+/*--事业有成--*/
+
+/*--子女结婚--*/
+
+/*--遛鸟--*/
+
+.starfield .ls {
+  transform: translateZ(0) scale(1);
+}
+
+/*
+.night2 {
+  width: 1080px;
+  height: 200%;
+  background: -webkit-gradient(linear, left bottom, right top, from(#697077), to(#222222));
+  left: 5690px;
+  bottom: 0;
+  transition-duration: 2s;
+} */
+
+.starfield .fs {
+  transform: translateZ(0) scale(0);
+  transition-duration: 2s;
+}
+
+/*--loading动画--*/
+
+.ldbg {
+  position: absolute;
+  z-index: 2;
+  width: 50%;
+  left: 25%;
+  top: 20%;
+  transition-duration: 2s;
+}
+
+.ldbg img {
+  width: 100%;
+  transition-duration: 1s;
+  transition-timing-function: linear;
+}
+
+.ldbg p {
+  line-height: 200px;
+  font-size: 18px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: #555;
+  top: 0;
+}
+
+.clock {
+  position: absolute;
+  z-index: 2;
+  width: 50%;
+  left: 25%;
+  top: 20%;
+  transform: translateZ(400px) rotate(-690deg);
+  transition-duration: 2s;
+  transform-style: preserve-3d;
+  /*保留3D空间*/
+}
+
+.clock img {
+  width: 100%;
+}
+
+.clock .clast {
+  position: absolute;
+  width: 8.9%;
+  height: 8.8%;
+  background-image: url(../images/clock12.png);
+  left: 24%;
+  top: 7%;
+  display: none;
+}
+
+.slideTip {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+}
+
+.slideTip p {
+  text-align: center;
+  margin-top: 70%;
+  color: #ccc;
+  letter-spacing: 1px;
+}
+
+/*--各类机型适配--*/
+
+@media (device-height: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+  /* 兼容iphone6 */
+}
+
+/*736*/
+
+@media (device-height: 736px) and (-webkit-min-device-pixel-ratio: 2) {
+  /* 兼容iphone6 Plus */
+  /* @media (device-height:672px){ */
+}
+
+@media (device-height: 812px) and (-webkit-min-device-pixel-ratio: 2) {
+  /* 兼容iphoneX */
+  /*@media (device-height:724px){*/
+  .role2 {
+    background-position: center 119%;
+  }
+}
+
+@media screen and (min-aspect-ratio: 13/9) {
+  #orientLayer {
+    display: none;
+  }
+}
+
+/*自定义动画*/
+
+@-webkit-keyframes disk {
+  0% {
+    background-image: url(../images/disk1.png);
+  }
+  50% {
+    background-image: url(../images/disk2.png);
+  }
+  100% {
+    background-image: url(../images/disk1.png);
+  }
+}
+
+@-webkit-keyframes waveon {
+  0% {
+    background-image: url(../images/wave1.png);
+  }
+  25% {
+    background-image: url(../images/wave2.png);
+  }
+  50% {
+    background-image: url(../images/wave3.png);
+  }
+  75% {
+    background-image: url(../images/wave2.png);
+  }
+  100% {
+    background-image: url(../images/wave1.png);
+  }
+}
+
+@-webkit-keyframes cam {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes loadpic {
+  0% {
+    background-image: url(../images/loadPic11.png);
+  }
+  25% {
+    background-image: url(../images/loadPic22.png);
+  }
+  50% {
+    background-image: url(../images/loadPic33.png);
+  }
+  75% {
+    background-image: url(../images/loadPic22.png);
+  }
+  100% {
+    background-image: url(../images/loadPic11.png);
+  }
+}
+
+@-webkit-keyframes dove {
+  0% {
+    background-image: url(../images/dove1.png);
+  }
+  50% {
+    background-image: url(../images/dove2.png);
+  }
+  100% {
+    background-image: url(../images/dove1.png);
+  }
+}
+
+@-webkit-keyframes role1 {
+  0% {
+    background-image: url(../hf/summer/summerRole1.png);
+  }
+  20% {
+    background-image: url(../hf/summer/summerRole2.png);
+  }
+  40% {
+    background-image: url(../hf/summer/summerRole3.png);
+  }
+  60% {
+    background-image: url(../hf/summer/summerRole4.png);
+  }
+  80% {
+    background-image: url(../hf/summer/summerRole5.png);
+  }
+  100% {
+    background-image: url(../hf/summer/summerRole1.png);
+  }
+}
+
+@-webkit-keyframes role2 {
+  0% {
+    background-image: url(../hf/autumn/autumnRole1.png);
+  }
+  5% {
+    background-image: url(../hf/autumn/autumnRole2.png);
+  }
+  10% {
+    background-image: url(../hf/autumn/autumnRole3.png);
+  }
+  15% {
+    background-image: url(../hf/autumn/autumnRole4.png);
+  }
+  20% {
+    background-image: url(../hf/autumn/autumnRole5.png);
+  }
+  25% {
+    background-image: url(../hf/autumn/autumnRole1.png);
+  }
+  30% {
+    background-image: url(../hf/autumn/autumnRole2.png);
+  }
+  35% {
+    background-image: url(../hf/autumn/autumnRole3.png);
+  }
+  40% {
+    background-image: url(../hf/autumn/autumnRole4.png);
+  }
+  45% {
+    background-image: url(../hf/autumn/autumnRole5.png);
+  }
+  50% {
+    background-image: url(../hf/autumn/autumnRole1.png);
+  }
+  55% {
+    background-image: url(../hf/autumn/autumnRole2.png);
+  }
+  60% {
+    background-image: url(../hf/autumn/autumnRole3.png);
+  }
+  65% {
+    background-image: url(../hf/autumn/autumnRole4.png);
+  }
+  70% {
+    background-image: url(../hf/autumn/autumnRole5.png);
+  }
+  75% {
+    background-image: url(../hf/autumn/autumnRole1.png);
+  }
+  80% {
+    background-image: url(../hf/autumn/autumnRole2.png);
+  }
+  85% {
+    background-image: url(../hf/autumn/autumnRole3.png);
+  }
+  90% {
+    background-image: url(../hf/autumn/autumnRole4.png);
+  }
+  95% {
+    background-image: url(../hf/autumn/autumnRole5.png);
+  }
+  100% {
+    background-image: url(../hf/autumn/autumnRole1.png);
+  }
+}
+
+@-webkit-keyframes role3 {
+  0% {
+    background-image: url(../hf/winter/winterRole1.png);
+  }
+  7% {
+    background-image: url(../hf/winter/winterRole2.png);
+  }
+  14% {
+    background-image: url(../hf/winter/winterRole3.png);
+  }
+  21% {
+    background-image: url(../hf/winter/winterRole1.png);
+  }
+  28% {
+    background-image: url(../hf/winter/winterRole2.png);
+  }
+  35% {
+    background-image: url(../hf/winter/winterRole3.png);
+  }
+  42% {
+    background-image: url(../hf/winter/winterRole1.png);
+  }
+  49% {
+    background-image: url(../hf/winter/winterRole2.png);
+  }
+  56% {
+    background-image: url(../hf/winter/winterRole3.png);
+  }
+  63% {
+    background-image: url(../hf/winter/winterRole1.png);
+  }
+  70% {
+    background-image: url(../hf/winter/winterRole2.png);
+  }
+  77% {
+    background-image: url(../hf/winter/winterRole3.png);
+  }
+  84% {
+    background-image: url(../hf/winter/winterRole1.png);
+  }
+  91% {
+    background-image: url(../hf/winter/winterRole2.png);
+  }
+  95% {
+    background-image: url(../hf/winter/winterRole3.png);
+  }
+  100% {
+    background-image: url(../hf/winter/winterRole1.png);
+  }
+}
+
+@-webkit-keyframes role4 {
+  0% {
+    background-image: url(../hf/spring/springRole1.png);
+  }
+  5% {
+    background-image: url(../hf/spring/springRole2.png);
+  }
+  10% {
+    background-image: url(../hf/spring/springRole3.png);
+  }
+  15% {
+    background-image: url(../hf/spring/springRole1.png);
+  }
+  20% {
+    background-image: url(../hf/spring/springRole2.png);
+  }
+  25% {
+    background-image: url(../hf/spring/springRole3.png);
+  }
+  30% {
+    background-image: url(../hf/spring/springRole1.png);
+  }
+  35% {
+    background-image: url(../hf/spring/springRole2.png);
+  }
+  40% {
+    background-image: url(../hf/spring/springRole3.png);
+  }
+  45% {
+    background-image: url(../hf/spring/springRole1.png);
+  }
+  50% {
+    background-image: url(../hf/spring/springRole2.png);
+  }
+  55% {
+    background-image: url(../hf/spring/springRole3.png);
+  }
+  60% {
+    background-image: url(../hf/spring/springRole1.png);
+  }
+  65% {
+    background-image: url(../hf/spring/springRole2.png);
+  }
+  70% {
+    background-image: url(../hf/spring/springRole3.png);
+  }
+  75% {
+    background-image: url(../hf/spring/springRole1.png);
+  }
+  80% {
+    background-image: url(../hf/spring/springRole2.png);
+  }
+  85% {
+    background-image: url(../hf/spring/springRole3.png);
+  }
+  90% {
+    background-image: url(../hf/spring/springRole1.png);
+  }
+  95% {
+    background-image: url(../hf/spring/springRole2.png);
+  }
+  100% {
+    background-image: url(../hf/spring/springRole3.png);
+  }
+}
+
+@-webkit-keyframes role5 {
+  0% {
+    background-image: url(../images/5_ActionScript_30001.png);
+  }
+  4% {
+    background-image: url(../images/5_ActionScript_30002.png);
+  }
+  8% {
+    background-image: url(../images/5_ActionScript_30003.png);
+  }
+  12% {
+    background-image: url(../images/5_ActionScript_30004.png);
+  }
+  16% {
+    background-image: url(../images/5_ActionScript_30005.png);
+  }
+  20% {
+    background-image: url(../images/5_ActionScript_30006.png);
+  }
+  24% {
+    background-image: url(../images/5_ActionScript_30007.png);
+  }
+  28% {
+    background-image: url(../images/5_ActionScript_30008.png);
+  }
+  32% {
+    background-image: url(../images/5_ActionScript_30009.png);
+  }
+  36% {
+    background-image: url(../images/5_ActionScript_30010.png);
+  }
+  40% {
+    background-image: url(../images/5_ActionScript_30011.png);
+  }
+  44% {
+    background-image: url(../images/5_ActionScript_30012.png);
+  }
+  48% {
+    background-image: url(../images/5_ActionScript_30013.png);
+  }
+  52% {
+    background-image: url(../images/5_ActionScript_30014.png);
+  }
+  56% {
+    background-image: url(../images/5_ActionScript_30015.png);
+  }
+  60% {
+    background-image: url(../images/5_ActionScript_30016.png);
+  }
+  64% {
+    background-image: url(../images/5_ActionScript_30017.png);
+  }
+  68% {
+    background-image: url(../images/5_ActionScript_30018.png);
+  }
+  72% {
+    background-image: url(../images/5_ActionScript_30019.png);
+  }
+  76% {
+    background-image: url(../images/5_ActionScript_30020.png);
+  }
+  80% {
+    background-image: url(../images/5_ActionScript_30021.png);
+  }
+  84% {
+    background-image: url(../images/5_ActionScript_30022.png);
+  }
+  88% {
+    background-image: url(../images/5_ActionScript_30023.png);
+  }
+  92% {
+    background-image: url(../images/5_ActionScript_30024.png);
+  }
+  96% {
+    background-image: url(../images/5_ActionScript_30025.png);
+  }
+  100% {
+    background-image: url(../images/5_ActionScript_30001.png);
+  }
+}
+
+@-webkit-keyframes role6 {
+  0% {
+    background-image: url(../images/6_ActionScript_30001.png);
+  }
+  7% {
+    background-image: url(../images/6_ActionScript_30003.png);
+  }
+  14% {
+    background-image: url(../images/6_ActionScript_30005.png);
+  }
+  21% {
+    background-image: url(../images/6_ActionScript_30007.png);
+  }
+  28% {
+    background-image: url(../images/6_ActionScript_30009.png);
+  }
+  35% {
+    background-image: url(../images/6_ActionScript_30011.png);
+  }
+  42% {
+    background-image: url(../images/6_ActionScript_30013.png);
+  }
+  49% {
+    background-image: url(../images/6_ActionScript_30015.png);
+  }
+  56% {
+    background-image: url(../images/6_ActionScript_30017.png);
+  }
+  63% {
+    background-image: url(../images/6_ActionScript_30019.png);
+  }
+  70% {
+    background-image: url(../images/6_ActionScript_30021.png);
+  }
+  77% {
+    background-image: url(../images/6_ActionScript_30023.png);
+  }
+  84% {
+    background-image: url(../images/6_ActionScript_30025.png);
+  }
+  91% {
+    background-image: url(../images/6_ActionScript_30027.png);
+  }
+  95% {
+    background-image: url(../images/6_ActionScript_30029.png);
+  }
+  100% {
+    background-image: url(../images/6_ActionScript_30001.png);
+  }
+}
+
+@-webkit-keyframes role7 {
+  0% {
+    background-image: url(../images/7_ActionScript_30001.png);
+  }
+  4% {
+    background-image: url(../images/7_ActionScript_30002.png);
+  }
+  8% {
+    background-image: url(../images/7_ActionScript_30003.png);
+  }
+  12% {
+    background-image: url(../images/7_ActionScript_30004.png);
+  }
+  16% {
+    background-image: url(../images/7_ActionScript_30005.png);
+  }
+  20% {
+    background-image: url(../images/7_ActionScript_30006.png);
+  }
+  24% {
+    background-image: url(../images/7_ActionScript_30007.png);
+  }
+  28% {
+    background-image: url(../images/7_ActionScript_30008.png);
+  }
+  32% {
+    background-image: url(../images/7_ActionScript_30009.png);
+  }
+  36% {
+    background-image: url(../images/7_ActionScript_30010.png);
+  }
+  40% {
+    background-image: url(../images/7_ActionScript_30011.png);
+  }
+  44% {
+    background-image: url(../images/7_ActionScript_30012.png);
+  }
+  48% {
+    background-image: url(../images/7_ActionScript_30013.png);
+  }
+  52% {
+    background-image: url(../images/7_ActionScript_30014.png);
+  }
+  56% {
+    background-image: url(../images/7_ActionScript_30015.png);
+  }
+  60% {
+    background-image: url(../images/7_ActionScript_30016.png);
+  }
+  64% {
+    background-image: url(../images/7_ActionScript_30017.png);
+  }
+  68% {
+    background-image: url(../images/7_ActionScript_30018.png);
+  }
+  72% {
+    background-image: url(../images/7_ActionScript_30019.png);
+  }
+  76% {
+    background-image: url(../images/7_ActionScript_30020.png);
+  }
+  80% {
+    background-image: url(../images/7_ActionScript_30021.png);
+  }
+  84% {
+    background-image: url(../images/7_ActionScript_30022.png);
+  }
+  88% {
+    background-image: url(../images/7_ActionScript_30023.png);
+  }
+  92% {
+    background-image: url(../images/7_ActionScript_30024.png);
+  }
+  96% {
+    background-image: url(../images/7_ActionScript_30025.png);
+  }
+  100% {
+    background-image: url(../images/7_ActionScript_30001.png);
+  }
+}
+
+@-webkit-keyframes role8 {
+  0% {
+    background-image: url(../images/8_ActionScript_30001.png);
+  }
+  7% {
+    background-image: url(../images/8_ActionScript_30003.png);
+  }
+  14% {
+    background-image: url(../images/8_ActionScript_30005.png);
+  }
+  21% {
+    background-image: url(../images/8_ActionScript_30007.png);
+  }
+  28% {
+    background-image: url(../images/8_ActionScript_30009.png);
+  }
+  35% {
+    background-image: url(../images/8_ActionScript_30011.png);
+  }
+  42% {
+    background-image: url(../images/8_ActionScript_30013.png);
+  }
+  49% {
+    background-image: url(../images/8_ActionScript_30015.png);
+  }
+  56% {
+    background-image: url(../images/8_ActionScript_30017.png);
+  }
+  63% {
+    background-image: url(../images/8_ActionScript_30019.png);
+  }
+  70% {
+    background-image: url(../images/8_ActionScript_30021.png);
+  }
+  77% {
+    background-image: url(../images/8_ActionScript_30023.png);
+  }
+  84% {
+    background-image: url(../images/8_ActionScript_30025.png);
+  }
+  91% {
+    background-image: url(../images/8_ActionScript_30027.png);
+  }
+  95% {
+    background-image: url(../images/8_ActionScript_30029.png);
+  }
+  100% {
+    background-image: url(../images/8_ActionScript_30001.png);
+  }
+}
+
+@-webkit-keyframes role9 {
+  0% {
+    background-image: url(../images/9_ActionScript_30001.png);
+  }
+  7% {
+    background-image: url(../images/9_ActionScript_30003.png);
+  }
+  14% {
+    background-image: url(../images/9_ActionScript_30005.png);
+  }
+  21% {
+    background-image: url(../images/9_ActionScript_30007.png);
+  }
+  28% {
+    background-image: url(../images/9_ActionScript_30009.png);
+  }
+  35% {
+    background-image: url(../images/9_ActionScript_30011.png);
+  }
+  42% {
+    background-image: url(../images/9_ActionScript_30013.png);
+  }
+  49% {
+    background-image: url(../images/9_ActionScript_30015.png);
+  }
+  56% {
+    background-image: url(../images/9_ActionScript_30017.png);
+  }
+  63% {
+    background-image: url(../images/9_ActionScript_30019.png);
+  }
+  70% {
+    background-image: url(../images/9_ActionScript_30021.png);
+  }
+  77% {
+    background-image: url(../images/9_ActionScript_30023.png);
+  }
+  84% {
+    background-image: url(../images/9_ActionScript_30025.png);
+  }
+  91% {
+    background-image: url(../images/9_ActionScript_30027.png);
+  }
+  95% {
+    background-image: url(../images/9_ActionScript_30029.png);
+  }
+  100% {
+    background-image: url(../images/9_ActionScript_30001.png);
+  }
+}
+
+@-webkit-keyframes role10 {
+  0% {
+    background-image: url(../images/10_ActionScript_30001.png);
+  }
+  4% {
+    background-image: url(../images/10_ActionScript_30002.png);
+  }
+  8% {
+    background-image: url(../images/10_ActionScript_30003.png);
+  }
+  12% {
+    background-image: url(../images/10_ActionScript_30004.png);
+  }
+  16% {
+    background-image: url(../images/10_ActionScript_30005.png);
+  }
+  20% {
+    background-image: url(../images/10_ActionScript_30006.png);
+  }
+  24% {
+    background-image: url(../images/10_ActionScript_30007.png);
+  }
+  28% {
+    background-image: url(../images/10_ActionScript_30008.png);
+  }
+  32% {
+    background-image: url(../images/10_ActionScript_30009.png);
+  }
+  36% {
+    background-image: url(../images/10_ActionScript_30010.png);
+  }
+  40% {
+    background-image: url(../images/10_ActionScript_30011.png);
+  }
+  44% {
+    background-image: url(../images/10_ActionScript_30012.png);
+  }
+  48% {
+    background-image: url(../images/10_ActionScript_30013.png);
+  }
+  52% {
+    background-image: url(../images/10_ActionScript_30014.png);
+  }
+  56% {
+    background-image: url(../images/10_ActionScript_30015.png);
+  }
+  60% {
+    background-image: url(../images/10_ActionScript_30016.png);
+  }
+  64% {
+    background-image: url(../images/10_ActionScript_30017.png);
+  }
+  68% {
+    background-image: url(../images/10_ActionScript_30018.png);
+  }
+  72% {
+    background-image: url(../images/10_ActionScript_30019.png);
+  }
+  76% {
+    background-image: url(../images/10_ActionScript_30020.png);
+  }
+  80% {
+    background-image: url(../images/10_ActionScript_30021.png);
+  }
+  84% {
+    background-image: url(../images/10_ActionScript_30022.png);
+  }
+  88% {
+    background-image: url(../images/10_ActionScript_30023.png);
+  }
+  92% {
+    background-image: url(../images/10_ActionScript_30024.png);
+  }
+  96% {
+    background-image: url(../images/10_ActionScript_30025.png);
+  }
+  100% {
+    background-image: url(../images/10_ActionScript_30001.png);
+  }
+}
+
+@-webkit-keyframes role11 {
+  0% {
+    background-image: url(../images/11_ActionScript_30001.png);
+  }
+  4% {
+    background-image: url(../images/11_ActionScript_30002.png);
+  }
+  8% {
+    background-image: url(../images/11_ActionScript_30003.png);
+  }
+  12% {
+    background-image: url(../images/11_ActionScript_30004.png);
+  }
+  16% {
+    background-image: url(../images/11_ActionScript_30005.png);
+  }
+  20% {
+    background-image: url(../images/11_ActionScript_30006.png);
+  }
+  24% {
+    background-image: url(../images/11_ActionScript_30007.png);
+  }
+  28% {
+    background-image: url(../images/11_ActionScript_30008.png);
+  }
+  32% {
+    background-image: url(../images/11_ActionScript_30009.png);
+  }
+  36% {
+    background-image: url(../images/11_ActionScript_30010.png);
+  }
+  40% {
+    background-image: url(../images/11_ActionScript_30011.png);
+  }
+  44% {
+    background-image: url(../images/11_ActionScript_30012.png);
+  }
+  48% {
+    background-image: url(../images/11_ActionScript_30013.png);
+  }
+  52% {
+    background-image: url(../images/11_ActionScript_30014.png);
+  }
+  56% {
+    background-image: url(../images/11_ActionScript_30015.png);
+  }
+  60% {
+    background-image: url(../images/11_ActionScript_30016.png);
+  }
+  64% {
+    background-image: url(../images/11_ActionScript_30017.png);
+  }
+  68% {
+    background-image: url(../images/11_ActionScript_30018.png);
+  }
+  72% {
+    background-image: url(../images/11_ActionScript_30019.png);
+  }
+  76% {
+    background-image: url(../images/11_ActionScript_30020.png);
+  }
+  80% {
+    background-image: url(../images/11_ActionScript_30021.png);
+  }
+  84% {
+    background-image: url(../images/11_ActionScript_30022.png);
+  }
+  88% {
+    background-image: url(../images/11_ActionScript_30023.png);
+  }
+  92% {
+    background-image: url(../images/11_ActionScript_30024.png);
+  }
+  96% {
+    background-image: url(../images/11_ActionScript_30025.png);
+  }
+  100% {
+    background-image: url(../images/11_ActionScript_30001.png);
+  }
+}
+
+@-webkit-keyframes role12 {
+  0% {
+    background-image: url(../images/12_ActionScript_30001.png);
+  }
+  4% {
+    background-image: url(../images/12_ActionScript_30003.png);
+  }
+  8% {
+    background-image: url(../images/12_ActionScript_30005.png);
+  }
+  12% {
+    background-image: url(../images/12_ActionScript_30007.png);
+  }
+  16% {
+    background-image: url(../images/12_ActionScript_30009.png);
+  }
+  20% {
+    background-image: url(../images/12_ActionScript_30011.png);
+  }
+  24% {
+    background-image: url(../images/12_ActionScript_30013.png);
+  }
+  28% {
+    background-image: url(../images/12_ActionScript_30015.png);
+  }
+  32% {
+    background-image: url(../images/12_ActionScript_30017.png);
+  }
+  36% {
+    background-image: url(../images/12_ActionScript_30019.png);
+  }
+  40% {
+    background-image: url(../images/12_ActionScript_30021.png);
+  }
+  44% {
+    background-image: url(../images/12_ActionScript_30023.png);
+  }
+  48% {
+    background-image: url(../images/12_ActionScript_30025.png);
+  }
+  52% {
+    background-image: url(../images/12_ActionScript_30027.png);
+  }
+  56% {
+    background-image: url(../images/12_ActionScript_30029.png);
+  }
+  60% {
+    background-image: url(../images/12_ActionScript_30031.png);
+  }
+  64% {
+    background-image: url(../images/12_ActionScript_30033.png);
+  }
+  68% {
+    background-image: url(../images/12_ActionScript_30035.png);
+  }
+  72% {
+    background-image: url(../images/12_ActionScript_30037.png);
+  }
+  76% {
+    background-image: url(../images/12_ActionScript_30039.png);
+  }
+  80% {
+    background-image: url(../images/12_ActionScript_30041.png);
+  }
+  84% {
+    background-image: url(../images/12_ActionScript_30043.png);
+  }
+  88% {
+    background-image: url(../images/12_ActionScript_30045.png);
+  }
+  92% {
+    background-image: url(../images/12_ActionScript_30047.png);
+  }
+  96% {
+    background-image: url(../images/12_ActionScript_30049.png);
+  }
+  100% {
+    background-image: url(../images/12_ActionScript_30001.png);
+  }
+}
+
+/*====流星雨动效====*/
+
+.ostars {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: none;
+}
+
+.ostar {
+  display: block;
+  width: 20px;
+  height: 20px;
+  top: 100px;
+  left: 400px;
+  position: relative;
+  transform-origin: 100% 0;
+  animation: star-ani 6s infinite linear;
+  opacity: 0;
+  z-index: 2;
+  background-size: 100% 100%;
+}
+
+.ostar:after {
+  content: '';
+  display: block;
+  top: 0px;
+  left: 11px;
+  border: 0px solid #fff;
+  border-width: 0px 90px 2px 90px;
+  border-color: transparent transparent transparent rgba(255, 255, 255, 0.3);
+  transform: rotate(-45deg) translate3d(-5px, 15px, 0);
+  box-shadow: 0 0 1px 0 rgba(255, 255, 255, 0.1);
+  transform-origin: 0% 100%;
+  animation: shooting-ani 3s infinite linear;
+}
+
+.pink {
+  top: 30px;
+  left: 395px;
+  animation-delay: 5s;
+  -webkit-animation-delay: 5s;
+  -moz-animation-delay: 5s;
+}
+
+.pink:after {
+  animation-delay: 5s;
+  -webkit-animation-delay: 5s;
+  -moz-animation-delay: 5s;
+}
+
+.blue {
+  top: 35px;
+  left: 432px;
+  animation-delay: 7s;
+  -webkit-animation-delay: 7s;
+  -moz-animation-delay: 7s;
+}
+
+.blue:after {
+  animation-delay: 12s;
+  -webkit-animation-delay: 7s;
+  animation-delay: 7s;
+}
+
+.yellow {
+  top: 50px;
+  left: 600px;
+  animation-delay: 5.8s;
+}
+
+.yellow:after {
+  animation-delay: 5.8s;
+}
+
+@keyframes star-ani {
+  0% {
+    opacity: 0;
+    transform: scale(0) rotate(0) translate3d(0, 0, 0);
+    -webkit-transform: scale(0) rotate(0) translate3d(0, 0, 0);
+    -moz-transform: scale(0) rotate(0) translate3d(0, 0, 0);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1) rotate(0) translate3d(-300px, 300px, 0);
+    -webkit-transform: scale(1) rotate(0) translate3d(-300px, 300px, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1) rotate(0) translate3d(-600px, 600px, 0);
+    -webkit-transform: scale(1) rotate(0) translate3d(-600px, 600px, 0);
+  }
+}
+
+@media (device-height:568px) and (-webkit-min-device-pixel-ratio:2) {
+  /* 兼容iphone5 */
+  .text14 {
+    width: 260px;
+    height: 65px;
+    margin-left: -130px;
+  }
+  .logo {
+    top: 33%;
+  }
+  .ewmtip {
+    padding-bottom: 13%;
+  }
+}
