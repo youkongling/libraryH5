@@ -1,4 +1,4 @@
-.sun{
+.sun {
   position: absolute;
   top: 20px;
   left: 20px;
@@ -7,14 +7,16 @@
   background-image: url(../hf/summer/sun.png);
   z-index: 5;
 }
-.summerGrass{
+
+.summerGrass {
   background-image: url(../hf/summer/summerGrass.png);
-  width:1000px;
+  width: 1000px;
   height: 252px;
   z-index: 2;
   bottom: 70px;
   left: 400px;
 }
+
 .teachBuild {
   background-image: url(../hf/summer/teachBuild.png);
   width: 1000px;
@@ -23,7 +25,8 @@
   z-index: 2;
   left: 400px;
 }
-.summerTree.T1{
+
+.summerTree.T1 {
   background-image: url(../hf/summer/summerTree.png);
   width: 200px;
   height: 420px;
@@ -31,36 +34,42 @@
   left: 20px;
   bottom: 30px;
 }
-.summerTree.T2{
+
+.summerTree.T2 {
   background-image: url(../hf/summer/summerTree.png);
   width: 200px;
   height: 420px;
   z-index: 5;
   left: 1800px;
 }
-.summerCloud{
+
+.summerCloud {
   width: 800px;
   height: 200px;
   background-image: url(../hf/summer/summerCloud.png);
   top: 20px;
   left: 50px;
 }
-.summerCloud2{
+
+.summerCloud2 {
   width: 400px;
   height: 100px;
   background-image: url(../hf/summer/summerCloud.png);
   top: 30px;
   left: 1000px;
 }
+
 /* autumn */
-.autumnGrass.G2{
+
+.autumnGrass.G2 {
   background-image: url(../hf/autumn/autumnGrass.png);
   width: 757px;
   height: 308px;
   left: 1500px;
   bottom: 60px;
 }
-.autumnTree{
+
+.autumnTree {
   background-image: url(../hf/autumn/autumnTree.png);
   width: 250px;
   height: 530px;
@@ -68,7 +77,8 @@
   left: 1600px;
   z-index: 5;
 }
-.fails{
+
+.fails {
   background-image: url(../hf/autumn/fails.png);
   width: 300px;
   height: 220px;
@@ -76,14 +86,16 @@
   left: 1800px;
   top: 50px;
 }
-.train{
+
+.train {
   background-image: url(../hf/autumn/Train.png);
   width: 646px;
   height: 383px;
   z-index: 5;
   left: 2000px;
 }
-.autumnGrass{
+
+.autumnGrass {
   background-image: url(../hf/autumn/autumnGrass.png);
   width: 450px;
   height: 300px;
@@ -91,14 +103,16 @@
   left: 1950px;
   bottom: 200px;
 }
-.winterSport{
+
+.winterSport {
   background-image: url(../hf/winter/winterSport.png);
   width: 1440px;
   height: 761px;
   z-index: 5;
   left: 2800px;
 }
-.winterTree{
+
+.winterTree {
   background-image: url(../hf/winter/winterTree.png);
   width: 1404px;
   height: 480px;
@@ -106,48 +120,57 @@
   left: 2800px;
   bottom: 300px;
 }
-.winterSnow{
+
+.winterSnow {
   background-image: url(../hf/winter/winterSnow.png);
   width: 1440px;
   height: 761px;
   left: 2800px;
   z-index: 6;
 }
+
 /* spring */
-.bigGrass{
+
+.bigGrass {
   background-image: url(../hf/spring/bigGrass.png);
   width: 1100px;
   height: 495px;
   left: 4400px;
   bottom: 120px;
 }
-.zhang{
+
+.zhang {
   background-image: url(../hf/spring/springZhang.png);
   width: 330px;
   height: 640px;
   left: 4700px
 }
-.springPink{
+
+.springPink {
   background-image: url(../hf/spring/springPink.png);
   width: 1224px;
   height: 700px;
   left: 4400px;
 }
-.springWhilte{
+
+.springWhilte {
   background-image: url(../hf/spring/springWhilte.png);
   width: 1224px;
   height: 700px;
   left: 4400px;
 }
+
 /* library */
-.library{
+
+.library {
   background-image: url(../hf/spring/library.png);
   width: 1000px;
   height: 550px;
   left: 5800px;
   z-index: 5;
 }
-.springLibGrass{
+
+.springLibGrass {
   background-image: url(../hf/spring/springLibGrass.png);
   width: 1000px;
   height: 280px;
@@ -155,11 +178,12 @@
   bottom: 80px;
   z-index: 5;
 }
-.springFler{
-  background-image: url(../hf/spring/springFler.png);
 
+.springFler {
+  background-image: url(../hf/spring/springFler.png);
 }
-.endPage{
+
+.endPage {
   background-image: url(../images/endPage.jpg);
   width: 100%;
   height: 100%;
@@ -170,10 +194,11 @@
   z-index: 2;
   overflow: hidden;
 }
-.noscroll,
-.noscrol{
-    overflow: hidden;
+
+.noscroll, .noscrol {
+  overflow: hidden;
 }
+
 .noscroll .endPage {
-    position: relative;
+  position: relative;
 }
